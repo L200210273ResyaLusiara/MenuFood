@@ -9,8 +9,6 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import coil.load
-import com.catnip.activityfragmentexample.model.Person
-import com.catnip.activityfragmentexample.presentation.fragmenttwo.FragmentTwoArgs
 import com.catnip.menufood.R
 import com.catnip.menufood.databinding.FragmentTwoBinding
 
@@ -23,10 +21,7 @@ class FragmentTwo : Fragment() {
     private lateinit var binding : FragmentTwoBinding
 
     private val person : Person? by lazy {
-        //bundle arguments
-        // arguments?.getParcelable(ARGS_PERSON)
 
-        // SafeArgs
         FragmentTwoArgs.fromBundle(arguments as Bundle).person
     }
 
